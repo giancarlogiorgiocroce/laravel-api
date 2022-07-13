@@ -1970,9 +1970,15 @@ var render = function render() {
       staticClass: "card-body"
     }, [_c("h5", {
       staticClass: "card-title"
-    }, [_vm._v(_vm._s(post.title))]), _vm._v(" "), post.category.name ? _c("h6", _vm._b({
+    }, [_vm._v(_vm._s(post.title))]), _vm._v(" "), _c("h6", {
       staticClass: "card-subtitle mb-2 text-muted"
-    }, "h6", _vm.getLogs(post.category.name), false), [_vm._v("\n                        Categoria: " + _vm._s(post.category.name) + "\n                    ")]) : _vm._e(), _vm._v(" "), _c("p", {
+    }, [_vm._v("\n                        Categoria: " + _vm._s(post.category.name) + "\n                    ")]), _vm._v(" "), post.tags.length > 0 ? _c("ul", [_c("li", {
+      staticClass: "exception"
+    }, [_vm._v("Tags:")]), _vm._v(" "), _vm._l(post.tags, function (tag) {
+      return _c("li", {
+        key: tag.id
+      }, [_vm._v("\n                            " + _vm._s(tag.name) + "\n                        ")]);
+    })], 2) : _vm._e(), _vm._v(" "), _c("p", {
       staticClass: "card-text"
     }, [_c("strong", [_vm._v("Descrizione:")]), _c("br"), _vm._v(_vm._s(post.content))])])]);
   }), 0)])]);
@@ -1996,7 +2002,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "h5[data-v-f348271a] {\n  text-transform: uppercase;\n}", ""]);
+exports.push([module.i, "h5[data-v-f348271a] {\n  text-transform: uppercase;\n}\nul[data-v-f348271a] {\n  list-style: none;\n}\nul .exception[data-v-f348271a] {\n  margin-left: -20px;\n}", ""]);
 
 // exports
 
