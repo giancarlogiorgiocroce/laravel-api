@@ -8,6 +8,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/front/style.css') }}">
+        <script src="{{ asset('js/front.js') }}"></script>
     </head>
     <body>
             @if (Route::has('login'))
